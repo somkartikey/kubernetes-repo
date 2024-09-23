@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: red
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      name:  bee
+  template:
+    metadata:
+      name: bee
+      labels:
+        name: bee
+    spec:
+      containers:
+      - name: bee-container
+        image: nginx
+        resources:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                - key: color 
+                  operator: In
+                  values: 
+                  - red 

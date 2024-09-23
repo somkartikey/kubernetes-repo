@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "webapp-pod"
+  namespace: default
+  labels:
+    app: "webapp-pod"
+spec:
+  containers:
+  - name: webapp-pod-container
+    image: "kodekloud/simple-webapp-mysql"
+    resources:
+      limits:
+        cpu: 200m
+        memory: 500Mi
+      requests:
+        cpu: 100m
+        memory: 200Mi
+    envFrom:
+      - secretRef:
+          name: db-secret
