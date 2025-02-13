@@ -13,8 +13,8 @@ git clone https://github.com/somkartikey/Docker-Repo.git
 2. Navigate to the required Kubernetes file and use it for deployment and learning.
 3. Refer to the documentation within the repository for additional details.
    
-Contribution
+Contribution:
 Contributions are welcome! If you have any improvements or additional Kubernetes files, feel free to submit a pull request.
 
-License
+License:
 This repository is open-source and can be used freely for learning and development purposes.
